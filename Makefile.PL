@@ -5,7 +5,7 @@ use strict;
 use ExtUtils::MakeMaker;
 
 WriteMakefile(
-    VERSION  => '0.1',
-    NAME     => 'FiveX',
-    ABSTRACT => "Use this perl's features",
+    VERSION_FROM  => 'lib/Five/X.pm',
+    NAME          => 'FiveX',
+    ABSTRACT_FROM => 'lib/Five/X.pm',
 );
