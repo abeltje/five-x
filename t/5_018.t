@@ -2,7 +2,7 @@
 use Test::More;
 BEGIN { $] < 5.018 and plan skip_all => "Not perl 5.18 yet: $]"; }
 
-use Five::Eighteen 'experimental';
+use Five::Eighteen ':experimental';
 
 use Test::NoWarnings ();
 
@@ -14,9 +14,7 @@ use Test::NoWarnings ();
 }
 my $l = l();
     /;
-    is($@, <<"    EOE", "unknown sub &main::l");
-Undefined subroutine &main::l called at (eval 7) line 6.
-    EOE
+    like($@, qr/^Undefined subroutine \&main::l called/, "unknown sub &main::l");
 }
 
 Test::NoWarnings::had_no_warnings();

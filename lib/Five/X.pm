@@ -1,10 +1,10 @@
 package Five::X;
 
-our $VESION = '0.01';
+our $VERSION = '0.01';
 
 =head1 NAME
 
-Five::X - A set of 'Modern Perl'ish modules that enable strict, warnings and features
+FiveX - A set of modules that enable strict and warnings and features
 
 =head1 SYNOPSIS
 

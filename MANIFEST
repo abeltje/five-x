@@ -4,12 +4,19 @@ lib/Five/Fourteen.pm
 lib/Five/Sixteen.pm
 lib/Five/Ten.pm
 lib/Five/Twelve.pm
+lib/Five/Twenty.pm
 lib/Five/X.pm
 Makefile.PL
 MANIFEST			This list of files
+MANIFEST.SKIP
 t/5_008.t
 t/5_010.t
 t/5_012.t
 t/5_014.t
 t/5_016.t
 t/5_018.t
+t/5_020.t
+xt/00-compile.t
+xt/10-manifest.t
+xt/20-pod.t
+xt/30-pod-coverage.t

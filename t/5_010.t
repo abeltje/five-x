@@ -1,23 +1,14 @@
 #! perl
-
 use Test::More;
+BEGIN { $] < 5.010 and plan skip_all => "Not perl 5.10 yet: $]"; }
 
-BEGIN {
-    if ( $] < 5.010 ) {
-        plan(skip_all => "This is not perl 5.10 ($])");
-    }
-    else {
-        plan(tests => 5);
-        use_ok("Five::Ten");
-        Five::Ten->import();
-    }
-}
+use Five::Ten;
 
 { # Enable strict and warnings and features;
     eval '$x = 10;';
     like(
         $@,
-        qr/^Global symbol "\$x" requires explicit package name at/,
+        qr/^Global symbol "\$x" requires explicit package name /,
         "strict is enabled"
     );
 
@@ -39,3 +30,5 @@ BEGIN {
     }
     is($stdout, "This is 5.010\n", "say()");
 }
+
+done_testing();

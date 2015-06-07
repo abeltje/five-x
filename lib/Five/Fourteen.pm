@@ -11,3 +11,13 @@ sub import {
 }
 
 1;
+
+=head1 NAME
+
+Five::Fourteen - Enable 'strict', 'warnings' and 'features :5.14' in the calling code
+
+=head1 COPYRIGHT
+
+(c) MMXV - Abe Timmerman <abeltje@cpan.org>
+
+=cut

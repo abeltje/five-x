@@ -9,3 +9,13 @@ sub import {
 }
 
 1;
+
+=head1 NAME
+
+Five::Eight - Enable 'strict' and 'warnings' in the calling code
+
+=head1 COPYRIGHT
+
+(c) MMXV - Abe Timmerman <abeltje@cpan.org>
+
+=cut

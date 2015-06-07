@@ -1,23 +1,16 @@
 #! perl
-
 use Test::More;
+BEGIN { $] < 5.008 and plan skip_all => "Not perl 5.8 yet: $]"; }
 
-BEGIN {
-    if ( $] < 5.008 ) {
-        plan(skip_all => "This is not 5.008");
-    }
-    else {
-        plan(tests => 4);
-    }
-    use_ok("Five::Eight");
-    Five::Eight->import();
-}
+use Five::Eight;
+
+use Test::NoWarnings ();
 
 { # Enable strict and warnings;
     eval '$x = 10;';
     like(
         $@,
-        qr/^Global symbol "\$x" requires explicit package name at/,
+        qr/^Global symbol "\$x" requires explicit package name /,
         "strict is enabled"
     );
 
@@ -38,3 +31,7 @@ BEGIN {
         "No 5.010 features"
     );
 }
+
+Test::NoWarnings::had_no_warnings();
+$Test::NoWarnings::do_end_test = 0;
+done_testing();

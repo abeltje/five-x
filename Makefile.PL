@@ -8,4 +8,7 @@ WriteMakefile(
     VERSION_FROM  => 'lib/Five/X.pm',
     NAME          => 'FiveX',
     ABSTRACT_FROM => 'lib/Five/X.pm',
+    BUILD_REQUIRES => {
+        'Test::NoWarnings' => 0,
+    },
 );
