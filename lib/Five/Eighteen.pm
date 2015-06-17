@@ -4,6 +4,8 @@ use warnings;
 use strict;
 use feature ':5.18';
 
+use Five::X;
+
 sub import {
     my $class = shift;
 
@@ -17,6 +19,11 @@ sub import {
     if (@features) {
         my @no_warnings = map "experimental::$_", @features;
         warnings->unimport(@no_warnings);
+
+        for my $version (experimental_versions()) {
+            next if $] < $version;
+            warnings->unimport(@{ experimental_warnings($version) });
+        }
     }
     feature->import(':5.18', @features);
 }

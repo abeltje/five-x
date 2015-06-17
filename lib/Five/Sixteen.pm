@@ -4,11 +4,21 @@ use warnings;
 use strict;
 use feature ':5.16';
 
+use Five::X;
+
 sub import {
     my $class = shift;
+
     warnings->import();
     strict->import();
     feature->import(':5.16');
+
+    if (@_ && $_[0] eq ':experimental') {
+        for my $version (experimental_versions()) {
+            next if $] < $version;
+            warnings->unimport(@{ experimental_warnings($version) });
+        }
+    }
 }
 
 1;

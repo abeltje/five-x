@@ -16,7 +16,7 @@ find sub {
 }, catdir('lib', 'Five');
 
 my %map = (
-    '5.022' => 'Twentytwo',
+    '5.022' => 'TwentyTwo',
     '5.020' => 'Twenty',
     '5.018' => 'Eighteen',
     '5.016' => 'Sixteen',
