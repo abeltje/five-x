@@ -40,18 +40,19 @@ Five::TwentyTwo - Enable 'strict', 'warnings' and 'features :5.22' in the callin
 =head1 SYNOPSIS
 
     package MyPackage;
-    use Five::Eighteen;
+    use Five::TwentyTwo;
     # strict, warnings and featere :5.22
 
-Perl 5.18 introduces experimental features that warn. These warnings can be
+Perl 5.18 introduced experimental features that warn. These warnings can be
 switched off with special 'no warnings' catagories. Use the B<:experimental>
 import-tag to enable these features without warnings.
 
     package MyPackage;
-    use Five::TwentyTwo ':experimantal';
+    use Five::TwentyTwo ':experimental';
     # now you also have:
     # 'lexical subs', 'postderef', 'postderef_qq', 'signatures', 'bitwise',
     # 'refaliasing'
+    # also use given/when/smartmatch on perl-5.18+ without warnings
 
 =head1 COPYRIGHT
 

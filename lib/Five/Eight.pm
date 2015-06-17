@@ -14,6 +14,12 @@ sub import {
 
 Five::Eight - Enable 'strict' and 'warnings' in the calling code
 
+=head1 SYNOPSIS
+
+    package MyPackage;
+    use Five::Eight;
+    # strict and warnings
+
 =head1 COPYRIGHT
 
 (c) MMXV - Abe Timmerman <abeltje@cpan.org>

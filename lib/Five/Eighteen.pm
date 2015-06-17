@@ -45,8 +45,9 @@ switched off with special 'no warnings' catagories. Use the B<:experimental>
 import-tag to enable these features without warnings.
 
     package MyPackage;
-    use Five::Eighteen ':experimantal';
+    use Five::Eighteen ':experimental';
     # now you also have 'lexical subs'
+    # also use given/when/smartmatch on perl-5.18+ without warnings
 
 =head1 COPYRIGHT
 

@@ -53,6 +53,36 @@ class without a feature category.
 Returns a listref of the warnings in the C<experimental::> class for the given
 perl version.
 
+=head3 5.018
+
+=over
+
+=item experimental::smartmatch  (feature :5.10)
+
+=back
+
+=head3 5.020
+
+=over
+
+=item experimental::smartmatch  (feature :5.10)
+
+=item experimental::autoderef   (5.14)
+
+=back
+
+=head3 5.022
+
+=over
+
+=item experimental::smartmatch  (feature :5.10)
+
+=item experimental::autoderef   (5.14)
+
+=item experimental::const_attr  (5.22)
+
+=back
+
 =head1 COPYRIGHT
 
 (c) MMXV - Abe Timmerman <abeltje@cpan.org>
