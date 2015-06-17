@@ -5,6 +5,21 @@ Changes on 2015-06-17 for repository at:
 Enjoy!
 
 ________________________________________________________________________________
+[06da06d] by abeltje on Wed, 17 Jun 2015 07:53:12 +0200
+
+     Add a Changes file.
+
+
+A	Changes
+M	MANIFEST
+________________________________________________________________________________
+[4babda7] by abeltje on Wed, 17 Jun 2015 07:50:07 +0200
+
+     Fix Makefile.PL for release-script
+
+
+M	Makefile.PL
+________________________________________________________________________________
 [4070753] by abeltje on Wed, 17 Jun 2015 07:31:46 +0200
 
      TestFix: Test::Pod::Coverage and perlversion
