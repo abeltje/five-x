@@ -1,0 +1,157 @@
+Changes on 2015-06-17 for repository at:
+  Fetch URL: ssh://git@source.test-smoke.org:9999/~/fivex
+  Push  URL: ssh://git@source.test-smoke.org:9999/~/fivex
+
+Enjoy!
+
+________________________________________________________________________________
+[4070753] by abeltje on Wed, 17 Jun 2015 07:31:46 +0200
+
+     TestFix: Test::Pod::Coverage and perlversion
+
+        Because Test::Pod::Coverage needs to compile the module, we cannot 
+        determine Pod-Coverage for modules that require a higher perl
+        version than we are using during running of the test. Skip these
+        modules.
+
+
+M	xt/30-pod-coverage.t
+________________________________________________________________________________
+[9eb5615] by abeltje on Wed, 17 Jun 2015 07:05:25 +0200
+
+     Add 5.22 + experimental:: warnings without feature
+
+        Add support for 5.22 Five::TwentyTwo (with experimentals)
+
+        Also extend the ':experimental' tag to versions before 5.18, when
+        'experimental::' warnings without a feature were introduced. This
+        means that «use Five::Ten ':experimental'» allows one to use
+        'given/when' on 5.18 without warnings.
+
+
+M	MANIFEST
+M	lib/Five/Eighteen.pm
+M	lib/Five/Fourteen.pm
+M	lib/Five/Sixteen.pm
+M	lib/Five/Ten.pm
+M	lib/Five/Twelve.pm
+M	lib/Five/Twenty.pm
+A	lib/Five/TwentyTwo.pm
+M	lib/Five/X.pm
+A	t/5_022.t
+M	xt/00-compile.t
+________________________________________________________________________________
+[d1df4ef] by abeltje on Sun, 7 Jun 2015 21:56:01 +0200
+
+     Catch up until perl 5.20
+
+        Still needs some tests for 5.16+
+
+
+A	.gitignore
+M	MANIFEST
+A	MANIFEST.SKIP
+M	Makefile.PL
+M	lib/Five/Eight.pm
+M	lib/Five/Eighteen.pm
+M	lib/Five/Fourteen.pm
+M	lib/Five/Sixteen.pm
+M	lib/Five/Ten.pm
+M	lib/Five/Twelve.pm
+A	lib/Five/Twenty.pm
+M	lib/Five/X.pm
+M	t/5_008.t
+M	t/5_010.t
+M	t/5_012.t
+M	t/5_014.t
+M	t/5_016.t
+M	t/5_018.t
+A	t/5_020.t
+A	xt/00-compile.t
+A	xt/10-manifest.t
+A	xt/20-pod.t
+A	xt/30-pod-coverage.t
+________________________________________________________________________________
+[0dd9f65] by abeltje on Mon, 1 Jun 2015 06:22:33 +0200
+
+     Update to 5.18
+
+        Added support up to perl 5.018. Removed subversions, as they won't
+        change the featuresets.
+
+
+M	MANIFEST
+M	Makefile.PL
+A	lib/Five/Eighteen.pm
+A	lib/Five/Fourteen.pm
+A	lib/Five/Sixteen.pm
+D	lib/Five/Ten/One.pm
+D	lib/Five/Ten/Zero.pm
+D	lib/Five/Twelve/One.pm
+D	lib/Five/Twelve/Zero.pm
+A	lib/Five/X.pm
+D	t/5_010_000.t
+D	t/5_010_001.t
+D	t/5_012_000.t
+D	t/5_012_001.t
+A	t/5_014.t
+A	t/5_016.t
+A	t/5_018.t
+________________________________________________________________________________
+[1b9ae18] by abeltje on Sun, 26 Sep 2010 10:11:31 +0000
+
+    
+        * [CHANGE]
+         + Add the distribution stuff.
+
+         git-svn-id: http://fidovcs/repos/cpan/trunk/fivex@93
+        03e79c58-f747-0410-a819-f71e7ca513d9
+
+
+A	MANIFEST
+________________________________________________________________________________
+[7ed176b] by abeltje on Sun, 26 Sep 2010 10:11:15 +0000
+
+    
+        * [CHANGE]
+         + Add the distribution stuff.
+
+         git-svn-id: http://fidovcs/repos/cpan/trunk/fivex@92
+        03e79c58-f747-0410-a819-f71e7ca513d9
+
+
+A	Makefile.PL
+________________________________________________________________________________
+[7aea2bb] by abeltje on Sun, 26 Sep 2010 10:05:19 +0000
+
+    
+        * [CHANGE]
+         + Initial import of files.
+
+         git-svn-id: http://fidovcs/repos/cpan/trunk/fivex@91
+        03e79c58-f747-0410-a819-f71e7ca513d9
+
+
+A	lib/Five/Eight.pm
+A	lib/Five/Ten.pm
+A	lib/Five/Ten/One.pm
+A	lib/Five/Ten/Zero.pm
+A	lib/Five/Twelve.pm
+A	lib/Five/Twelve/One.pm
+A	lib/Five/Twelve/Zero.pm
+A	t/5_008.t
+A	t/5_010.t
+A	t/5_010_000.t
+A	t/5_010_001.t
+A	t/5_012.t
+A	t/5_012_000.t
+A	t/5_012_001.t
+________________________________________________________________________________
+[381f0fb] by abeltje on Sun, 26 Sep 2010 07:54:03 +0000
+
+    
+        * [CHANGE]
+         + like Modern::Perl, nicer name imo.
+
+         git-svn-id: http://fidovcs/repos/cpan/trunk/fivex@90
+        03e79c58-f747-0410-a819-f71e7ca513d9
