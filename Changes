@@ -5,6 +5,29 @@ Changes on 2015-06-17 for repository at:
 Enjoy!
 
 ________________________________________________________________________________
+[9355a53] by abeltje on Wed, 17 Jun 2015 21:34:46 +0200
+
+     More documentation.
+
+
+M	lib/Five/Eight.pm
+M	lib/Five/Eighteen.pm
+M	lib/Five/Fourteen.pm
+M	lib/Five/Sixteen.pm
+M	lib/Five/Ten.pm
+M	lib/Five/Twelve.pm
+M	lib/Five/Twenty.pm
+M	lib/Five/TwentyTwo.pm
+M	lib/Five/X.pm
+________________________________________________________________________________
+[237ea26] by abeltje on Wed, 17 Jun 2015 08:03:52 +0200
+
+     Autocommit for distribution Five::X 0.01_01 (test)
+
+
+M	Changes
+M	lib/Five/X.pm
+________________________________________________________________________________
 [06da06d] by abeltje on Wed, 17 Jun 2015 07:53:12 +0200
 
      Add a Changes file.

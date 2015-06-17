@@ -1,6 +1,6 @@
 package Five::X;
 
-our $VERSION = '0.01_01';
+our $VERSION = '0.02';
 
 use Exporter 'import';
 our @EXPORT = qw/ experimental_versions experimental_warnings /;
