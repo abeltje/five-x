@@ -11,20 +11,20 @@ stages:
 
 perl-prebuild-job:
   stage: prebuild
-  label: fidoci
+  tags: [fidoci]
   script:
     - cpanm --from https://dpan.ztreet.nl/ -L $LOCALPERLLIB --installdeps .
 
 perl-build-job:
   stage: build
-  label: fidoci
+  tags: [fidoci]
   script:
     - perl Makefile.PL
     - make
 
 perl-test-job:
   stage: test
-  label: fidoci
+  tags: [fidoci]
   variables:
     AUTHOR_TESTING: 1
   script:
@@ -32,6 +32,6 @@ perl-test-job:
 
 perl-cleanup-job:
   stage: clean
-  label: fidoci
+  tags: [fidoci]
   script:
     - make distclean
