@@ -137,7 +137,7 @@ sub unfeatures {
 
 =head1 NAME
 
-FiveX - A set of modules that enable strict and warnings and features
+Five::X - A set of modules that enable strict and warnings and features
 
 =head1 SYNOPSIS
 
