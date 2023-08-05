@@ -1,6 +1,8 @@
 ---
 variables:
-  LOCALPERLLIB: /opt/perl/perl5.38.0/local
+  P5VER: perl5.38.0
+  LOCALPERLBIN: /opt/perl/$P5VER/bin
+  LOCALPERLLIB: /opt/perl/$P5VER/local
   PERL5LIB: $LOCALPERLLIB/lib/perl5
 
 stages:
@@ -13,13 +15,13 @@ perl-prebuild-job:
   stage: prebuild
   tags: [fidoci]
   script:
-    - cpanm --from https://dpan.ztreet.nl/ -L $LOCALPERLLIB --installdeps .
+    - $LOCALPERLBIN/cpanm --from https://dpan.ztreet.nl/ -L $LOCALPERLLIB --installdeps .
 
 perl-build-job:
   stage: build
   tags: [fidoci]
   script:
-    - perl Makefile.PL
+    - $LOCALPERLBIN/perl Makefile.PL
     - make
 
 perl-test-job:
