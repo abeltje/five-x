@@ -1,0 +1,106 @@
+---
+#### Features.yml up to 5.38.0
+say:
+  min: '5.010'
+
+state:
+  min: '5.010'
+
+switch:
+  min: '5.010'
+  exp: '5.018'
+  cat: smartmatch
+  max: '5.042'
+  off: '5.038'
+
+unicode_strings:
+  min: '5.012'
+
+unicode_eval:
+  min: '5.016'
+
+evalbytes:
+  min: '5.016'
+
+current_sub:
+  min: '5.016'
+
+array_base:
+  min: '5.016'
+  max: '5.028'
+
+fc:
+  min: '5.016'
+
+lexical_subs:
+  min: '5.018'
+  exp: 5.018-5.024
+  core: '5.026'
+
+postderef:
+  min: '5.020'
+  exp: 5.020-5.022
+  core: '5.024'
+
+postderef_qq:
+  min: '5.020'
+  exp: 5.020-5.022
+  core: '5.024'
+
+signatures:
+  min: '5.020'
+  exp: 5.020-5.034
+
+refaliasing:
+  min: '5.022'
+  exp: '5.022'
+
+bitwise:
+  min: '5.022'
+  exp: 5.022-5.026
+
+declared_refs:
+  min: '5.026'
+  exp: '5.026'
+
+isa:
+  min: '5.032'
+  exp: 5.032-5.034
+
+indirect:
+  min: '5.032'
+  off: '5.032'
+
+multidimensional:
+  min: '5.034'
+  off: '5.034'
+
+bareword_filehandles:
+  min: '5.034'
+  off: '5.034'
+
+try:
+  min: '5.036'
+  exp: '5.036'
+
+defer:
+  min: '5.036'
+  exp: '5.036'
+
+extra_paired_delimiters:
+  min: '5.036'
+  exp: '5.036'
+
+module_true:
+  min: '5.038'
+
+class:
+  min: '5.038'
+  exp: '5.038'
+
+autoderef:
+  min: '5.014'
+  max: '5.022'
+  exp: 5.014-5.022
+
+# vim: filetype=yaml shiftwidth=2 tabstop=2 expandtab
