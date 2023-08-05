@@ -78,5 +78,6 @@
 #!end included /opt/homebrew/opt/perl/lib/perl5/5.36/ExtUtils/MANIFEST.SKIP
 
 
+\.gitlab-ci\.yml
 lastlog\.jsonl
 contrib/
