@@ -1,0 +1,37 @@
+---
+variables:
+  LOCALPERLLIB: /opt/perl/perl5.38.0/local
+  PERL5LIB: $LOCALPERLLIB/lib/perl5
+
+stages:
+  - prebuild
+  - build
+  - test
+  - clean
+
+perl-prebuild-job:
+  stage: prebuild
+  label: fidoci
+  script:
+    - cpanm --from https://dpan.ztreet.nl/ -L $LOCALPERLLIB --installdeps .
+
+perl-build-job:
+  stage: build
+  label: fidoci
+  script:
+    - perl Makefile.PL
+    - make
+
+perl-test-job:
+  stage: test
+  label: fidoci
+  variables:
+    AUTHOR_TESTING: 1
+  script:
+    - make test TEST_VERBOSE=1
+
+perl-cleanup-job:
+  stage: clean
+  label: fidoci
+  script:
+    - make distclean
