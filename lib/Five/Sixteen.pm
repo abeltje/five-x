@@ -1,24 +1,16 @@
 package Five::Sixteen;
-use 5.016;
 use warnings;
 use strict;
-use feature ':5.16';
+use v5.16;
 
-use Five::X;
+use parent 'Five::X';
+
+our $DEBUG //= 0;
 
 sub import {
     my $class = shift;
 
-    warnings->import();
-    strict->import();
-    feature->import(':5.16');
-
-    if (@_ && $_[0] eq ':experimental') {
-        for my $version (experimental_versions()) {
-            next if $] < $version;
-            warnings->unimport(@{ experimental_warnings($version) });
-        }
-    }
+    $class->SUPER::import("5.016", @_);
 }
 
 1;

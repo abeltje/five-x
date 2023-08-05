@@ -1,24 +1,16 @@
 package Five::Ten;
-use 5.010;
 use warnings;
 use strict;
-use feature ':5.10';
+use v5.010;
 
-use Five::X;
+use base 'Five::X';
+
+our $DEBUG //= 0;
 
 sub import {
     my $class = shift;
 
-    warnings->import();
-    strict->import();
-    feature->import(':5.10');
-
-    if (@_ && $_[0] eq ':experimental') {
-        for my $version (experimental_versions()) {
-            next if $] < $version;
-            warnings->unimport(@{ experimental_warnings($version) });
-        }
-    }
+    $class->SUPER::import("5.010", @_);
 }
 
 1;

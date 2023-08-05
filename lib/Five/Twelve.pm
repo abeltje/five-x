@@ -1,24 +1,16 @@
 package Five::Twelve;
-use 5.012;
 use warnings;
 use strict;
-use feature ':5.12';
+use v5.12;
 
-use Five::X;
+use parent 'Five::X';
+
+our $DEBUG //= 0;
 
 sub import {
     my $class = shift;
 
-    warnings->import();
-    strict->import();
-    feature->import(':5.12');
-
-    if (@_ && $_[0] eq ':experimental') {
-        for my $version (experimental_versions()) {
-            next if $] < $version;
-            warnings->unimport(@{ experimental_warnings($version) });
-        }
-    }
+    $class->SUPER::import("5.012", @_);
 }
 
 1;

@@ -1,31 +1,16 @@
 package Five::Twenty;
-use 5.020;
 use warnings;
 use strict;
-use feature ':5.20';
+use v5.20;
 
-use Five::X;
+use parent 'Five::X';
+
+our $DEBUG //= 0;
 
 sub import {
     my $class = shift;
 
-    my @features;
-    if (@_ and $_[0] eq ':experimental') {
-        push @features, ('lexical_subs', 'postderef', 'postderef_qq', 'signatures');
-    };
-
-    warnings->import();
-    strict->import();
-    if (@features) {
-        my @no_warnings = map "experimental::$_", grep !/_qq/, @features;
-        warnings->unimport(@no_warnings);
-
-        for my $version (experimental_versions()) {
-            next if $] < $version;
-            warnings->unimport(@{ experimental_warnings($version) });
-        }
-    }
-    feature->import(':5.20', @features);
+    $class->SUPER::import("5.020", @_);
 }
 
 1;
