@@ -37,7 +37,7 @@ perl-test-job:
   variables:
     AUTHOR_TESTING: 1
   script:
-    - make test TEST_VERBOSE=1 TEST_FILES=xt/
+    - make test TEST_VERBOSE=1 TEST_FILES=xt/*.t
     - make test TEST_VERBOSE=1
 
 perl-cleanup-job:
