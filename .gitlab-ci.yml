@@ -4,6 +4,7 @@ variables:
   LOCALPERLBIN: /opt/perl/$P5VER/bin
   LOCALPERLLIB: /opt/perl/$P5VER/local
   PERL5LIB: $LOCALPERLLIB/lib/perl5
+  AUTHOR_TESTING: 1
 
 stages:
   - prebuild
@@ -34,8 +35,6 @@ perl-test-job:
   stage: test
   tags: [fidoci]
   dependencies: [perl-build-job]
-  variables:
-    AUTHOR_TESTING: 1
   script:
     - make test TEST_VERBOSE=1 TEST_FILES=xt/*.t
     - make test TEST_VERBOSE=1
