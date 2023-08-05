@@ -23,10 +23,17 @@ perl-build-job:
   script:
     - $LOCALPERLBIN/perl Makefile.PL
     - make
+  artifacts:
+    paths:
+      - Makefile
+      - blib/
+      - pm_to_blib
+      - MYMETA.*
 
 perl-test-job:
   stage: test
   tags: [fidoci]
+  dependencies: [perl-build-job]
   variables:
     AUTHOR_TESTING: 1
   script:
@@ -35,5 +42,6 @@ perl-test-job:
 perl-cleanup-job:
   stage: clean
   tags: [fidoci]
+  dependencies: [perl-build-job]
   script:
     - make distclean
